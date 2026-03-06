@@ -1,0 +1,446 @@
+/* ========== Base Reset & Typography ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #fff9f3;
+  color: #2b2b2b;
+  line-height: 1.6;
+}
+
+/* ========== Layout Helpers ========== */
+.container {
+  width: min(1100px, 100% - 2rem);
+  margin: 0 auto;
+}
+
+/* ========== Header / Navbar ========== */
+header {
+  background: #1f130f;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #f7b267;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #f9f5f0;
+  font-size: 0.95rem;
+  transition: opacity 0.2s;
+}
+
+.nav-links a:hover {
+  opacity: 0.7;
+}
+
+.btn-nav {
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: none;
+  background: #f7b267;
+  color: #1f130f;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s, opacity 0.2s;
+}
+
+.btn-nav:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0.9;
+}
+
+/* ========== Hero Section (Home) ========== */
+.hero {
+  min-height: 75vh;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 3rem 1rem;
+}
+
+.hero-text h1 {
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  margin-bottom: 1rem;
+}
+
+.hero-text h1 span {
+  color: #c96c38;
+}
+
+.hero-text p {
+  max-width: 30rem;
+  margin-bottom: 1.5rem;
+  color: #4a3b35;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: transform 0.15s, box-shadow 0.15s, background 0.15s, color 0.15s;
+}
+
+.btn-primary {
+  background: #c96c38;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #c96c38;
+  border: 1px solid #c96c38;
+}
+
+.btn-secondary:hover {
+  background: #c96c38;
+  color: #fff;
+}
+
+.hero-image {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.hero-tag {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 0.5rem 0.9rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+}
+
+/* ========== Section Styles ========== */
+.section {
+  padding: 3rem 1rem;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.section-subtitle {
+  margin-bottom: 1.5rem;
+  color: #5b4b42;
+}
+
+/* ========== Home – Highlights ========== */
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.25rem 1.25rem 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* ========== Menu Page ========== */
+.menu-page-header {
+  text-align: center;
+  padding: 3rem 1rem 1rem;
+}
+
+.menu-page-header p {
+  color: #5b4b42;
+}
+
+.menu-section {
+  padding: 1rem 1rem 3rem;
+}
+
+.menu-category {
+  margin-bottom: 2rem;
+}
+
+.menu-category h2 {
+  border-bottom: 2px solid #f0d3b8;
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.menu-grid {
+  display: grid;
+  gap: 0.75rem 1.5rem;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px dashed #e0c7ae;
+}
+
+.menu-item-info h3 {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.menu-item-info p {
+  font-size: 0.9rem;
+  color: #6a5a50;
+}
+
+.menu-item-price {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ========== Gallery Page ========== */
+.gallery-header {
+  text-align: center;
+  padding: 3rem 1rem 1rem;
+}
+
+.gallery-grid {
+  padding: 1rem 1rem 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.8rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  display: block;
+  border-radius: 14px;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+  filter: saturate(1.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.gallery-grid img:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* ========== Booking / Contact Page ========== */
+.booking-layout {
+  padding: 3rem 1rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 2.5rem;
+}
+
+.booking-form {
+  background: #fff;
+  border-radius: 18px;
+  padding: 1.5rem 1.5rem 1.75rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.booking-form h2 {
+  margin-bottom: 0.75rem;
+}
+
+.booking-form p {
+  margin-bottom: 1.25rem;
+  color: #5b4b42;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4a3b35;
+}
+
+input,
+textarea,
+select {
+  padding: 0.6rem 0.7rem;
+  border-radius: 10px;
+  border: 1px solid #e3cbb3;
+  background: #fffdf9;
+  font: inherit;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #c96c38;
+  box-shadow: 0 0 0 2px rgba(201, 108, 56, 0.15);
+}
+
+.booking-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-card {
+  background: #1f130f;
+  color: #f9f5f0;
+  border-radius: 18px;
+  padding: 1.25rem 1.5rem;
+}
+
+.contact-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.contact-card p {
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.contact-links a {
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.map-wrapper {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* ========== Footer ========== */
+footer {
+  background: #1f130f;
+  color: #f9f5f0;
+  padding: 1.5rem 1rem;
+  margin-top: 2rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-links a {
+  color: #f7b267;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 2rem;
+  }
+
+  .hero-image {
+    order: -1;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .nav-links {
+    display: none; /* keeping it simple for now */
+  }
+
+  .booking-layout {
+    grid-template-columns: 1fr;
+  }
+}
